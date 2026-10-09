@@ -1,0 +1,11 @@
+{
+  "name": "the-resistance-avalon",
+  "version": "3.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Pass-and-play web app for The Resistance: Avalon. No build step; package.json exists only so Node can run the tests.",
+  "scripts": {
+    "test": "node tests/engine.test.js",
+    "serve": "python -m http.server 8080"
+  }
+}
