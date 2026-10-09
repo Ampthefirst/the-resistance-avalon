@@ -91,6 +91,11 @@ button:disabled { cursor: not-allowed; opacity: 0.45; }
   .log { grid-area: log; }
 }
 
+@media (max-width: 360px) {
+  .topbar { padding: 10px; }
+  h1 { font-size: 1.05rem; letter-spacing: 0.04em; }
+}
+
 /* ---------- buttons ---------- */
 
 .btn {
@@ -103,7 +108,7 @@ button:disabled { cursor: not-allowed; opacity: 0.45; }
 }
 .btn:hover:not(:disabled) { border-color: var(--muted); }
 .btn.primary { background: var(--gold); border-color: var(--gold); color: #1c1503; }
-.btn.small { min-height: 38px; padding: 6px 10px; font-size: 0.9rem; }
+.btn.small { min-height: 38px; padding: 6px 10px; font-size: 0.9rem; white-space: nowrap; }
 .btn.wide { width: 100%; }
 .good-btn { background: var(--good-bg); border-color: var(--good); }
 .evil-btn { background: var(--evil-bg); border-color: var(--evil); }

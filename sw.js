@@ -31,7 +31,9 @@ self.addEventListener('fetch', (event) => {
   const { request } = event;
   if (request.method !== 'GET' || new URL(request.url).origin !== self.location.origin) return;
   event.respondWith(
-    fetch(request)
+    // 'no-cache' revalidates with the server, so a new deploy shows up on the next load
+    // instead of waiting out the browser's HTTP cache.
+    fetch(request.url, { cache: 'no-cache' })
       .then((response) => {
         if (response.ok) {
           const copy = response.clone();
