@@ -174,6 +174,7 @@ function setupSummaryHtml() {
         return Object.entries(counts).map(([k, c]) => `${c > 1 ? c + '× ' : ''}${E.ROLES[k].name}`).join(', ');
       };
       body += `<p><span class="good">Good:</span> ${tally(deck.good)}</p><p><span class="evil">Evil:</span> ${tally(deck.evil)}</p>`;
+      body += `<p>Lady of the Lake: <strong>${config.lady ? 'in play' : 'not in play'}</strong>${config.lady ? ' <span class="muted">(a token, not a role; its holder can be Good or Evil)</span>' : ''}</p>`;
     }
   }
   const allErrors = ui.error ? [...errors, ui.error] : errors;
